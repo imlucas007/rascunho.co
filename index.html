@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RASCUNHO.CO_</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="contador.css">
+</head>
+<body>
+
+  <main class="contador-wrapper">
+
+    <p class="contador-legenda">RASCUNHO.CO_</p>
+
+    <!-- Contador: os números são preenchidos pelo contador.js -->
+    <div class="contador" id="contador">
+      <div class="contador-bloco">
+        <span class="contador-numero" id="dias">00</span>
+        <span class="contador-label">dias</span>
+      </div>
+      <span class="contador-separador" aria-hidden="true">:</span>
+      <div class="contador-bloco">
+        <span class="contador-numero" id="horas">00</span>
+        <span class="contador-label">horas</span>
+      </div>
+      <span class="contador-separador" aria-hidden="true">:</span>
+      <div class="contador-bloco">
+        <span class="contador-numero" id="minutos">00</span>
+        <span class="contador-label">min</span>
+      </div>
+      <span class="contador-separador" aria-hidden="true">:</span>
+      <div class="contador-bloco">
+        <span class="contador-numero" id="segundos">00</span>
+        <span class="contador-label">seg</span>
+      </div>
+    </div>
+
+    <p class="contador-encerrado" id="mensagem-encerrado" hidden>É hoje! 🎉</p>
+
+  </main>
+
+  <script src="contador.js"></script>
+</body>
+</html>

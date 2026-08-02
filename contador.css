@@ -1,0 +1,116 @@
+
+:root {
+  --cor-fundo:        #e6dfce;   
+  --cor-numero:        #121212;  
+  --cor-label:          #121212; 
+  --cor-legenda:        #121212; 
+  --cor-destaque:       #121212; 
+
+  --fonte-principal:   font-family: "Playfair Display", serif; 
+
+  --tamanho-numero: 4.5rem;
+}
+
+/* ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-principal);
+  padding: 24px;
+}
+
+.contador-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.contador-legenda {
+  color: var(--cor-legenda);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: var(--fonte-principal);
+  font-style: italic;
+}
+
+.contador {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.contador-bloco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 3.5ch;
+}
+
+.contador-numero {
+  font-family: var(--fonte-principal);
+  font-weight: 100;
+  font-size: var(--tamanho-numero);
+  line-height: 1;
+  color: var(--cor-numero);
+  font-variant-numeric: tabular-nums; /* mantém os números alinhados ao trocar */
+}
+
+.contador-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-label);
+  font-size: 0.9rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.contador-separador {
+  font-size: calc(var(--tamanho-numero) * 0.7);
+  font-weight: 100;
+  color: var(--cor-destaque);
+  transform: translateY(-8px); /* alinha visualmente com os números */
+  animation: piscar 1.4s ease-in-out infinite;
+}
+
+.contador-encerrado {
+  font-family: var(--fonte-principal);
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: var(--cor-destaque);
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+/* Respeita quem prefere menos movimento na tela */
+@media (prefers-reduced-motion: reduce) {
+  .contador-separador { animation: none; }
+}
+
+/* Telas menores: números um pouco menores e menos espaçamento */
+@media (max-width: 520px) {
+  :root {
+    --tamanho-numero: 2.6rem;
+  }
+  .contador {
+    gap: 10px;
+  }
+}
