@@ -1,6 +1,4 @@
-const DATA_ALVO = new Date(2026, 7, 5, 0, 0, 0); // <-- TROCAR AQUI
-
-/* ========================================================= */
+const DATA_ALVO = new Date(2026, 7, 5, 0, 0, 0); 
 
 const elDias = document.getElementById('dias');
 const elHoras = document.getElementById('horas');
@@ -18,7 +16,6 @@ function atualizarContagem() {
   const agora = new Date().getTime();
   const diferenca = DATA_ALVO.getTime() - agora;
 
-  // Quando a data já passou, para o contador e mostra a mensagem final
   if (diferenca <= 0) {
     clearInterval(intervalo);
     elContador.hidden = true;

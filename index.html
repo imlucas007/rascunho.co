@@ -12,6 +12,28 @@
 </head>
 <body>
 
+  <!-- =========================================================
+       FORMAS GEOMÉTRICAS DECORATIVAS
+       Puramente visuais (contorno vazado, sem preenchimento).
+       - Posição/tamanho de cada forma: classes .forma-circulo,
+         .forma-quadrado e .forma-triangulo no contador.css.
+       - Visibilidade de todas de uma vez: variável
+         --opacidade-formas no topo do contador.css.
+       - Quer adicionar mais formas? Duplique um bloco <svg> abaixo
+         e crie uma classe .forma-nome-nova no CSS.
+  ========================================================= -->
+  <div class="formas-decorativas" aria-hidden="true">
+    <svg class="forma forma-circulo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1"/>
+    </svg>
+    <svg class="forma forma-quadrado" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="184" height="184" fill="none" stroke="currentColor" stroke-width="1"/>
+    </svg>
+    <svg class="forma forma-triangulo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="100,10 190,180 10,180" fill="none" stroke="currentColor" stroke-width="1"/>
+    </svg>
+  </div>
+
   <main class="contador-wrapper">
 
     <p class="contador-legenda">RASCUNHO.CO_</p>
