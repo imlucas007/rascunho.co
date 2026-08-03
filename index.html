@@ -1,435 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rascunho.co</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RASCUNHO.CO</title>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./images/icon.webp" type="image/x-icon">
+<!-- FONTE: kit "bogart" via Adobe Fonts (Typekit) -->
+<link rel="stylesheet" href="https://use.typekit.net/inv2xog.css">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Syne:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Estilos externos -->
-  <link rel="stylesheet" href="./css/styles.css">
+<link rel="icon" href="Ativo 1.png"> 
+<link rel="stylesheet" href="contador.css">
 </head>
 <body>
 
-  <!-- CURSOR -->
-  <div id="cursor"></div>
-
-  <!-- ════════════════════════════════════
-       HEADER / NAV
-  ════════════════════════════════════ -->
-  <header>
-    <div class="nav-inner">
-
-      <!-- Logo: substitua o src pela sua logo vetorizada (320x80px, fundo transparente) -->
-      <a href="#" class="nav-logo">
-        <img src="./images/logo_nav.png" alt="Rascunho.co"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
-        <!-- fallback caso a imagem não carregue -->
-        <span class="nav-logo-text" style="display:none;">rascunho<span>.co</span></span>
-      </a>
-
-      <!-- Links desktop -->
-      <ul class="nav-links">
-        <li><a href="#projetos" class="nav-link">Projetos</a></li>
-        <li><a href="#sobre"    class="nav-link">Sobre</a></li>
-        <li><a href="#servicos" class="nav-link">Serviços</a></li>
-        <li><a href="#contato"  class="nav-link">Contatos</a></li>
-      </ul>
-
-      <a href="#contato" class="nav-cta">Falar comigo</a>
-
-      <!-- Botão hamburguer (mobile) -->
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-
-    <!-- Menu mobile -->
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-      <a href="#projetos" class="nav-link mobile-link">Projetos</a>
-      <a href="#sobre"    class="nav-link mobile-link">Sobre</a>
-      <a href="#servicos" class="nav-link mobile-link">Serviços</a>
-      <a href="#contato"  class="nav-link mobile-link">Contatos</a>
-    </nav>
-  </header>
-
-  <!-- ════════════════════════════════════
-       HERO
-  ════════════════════════════════════ -->
-  <section class="hero" id="home">
-
-    <p class="hero-eyebrow fade-up">Estúdio Criativo · São Paulo</p>
-
-  <div class="hero-logo-block fade-up">
-  <img src="./images/logo.png" 
-       alt="Rascunho.co" 
-       class="hero-logo-img">
-</div>
-
-    <p class="hero-desc fade-up">
-      Web design &amp; identidade visual.<br>
-      Cada projeto começa como um <em>rascunho_</em><br>
-      e vira obra.
-    </p>
-
-    <div class="hero-btns fade-up">
-      <a href="#projetos" class="btn-filled">
-        Ver projetos
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      <a href="https://www.behance.net/rascunhoco#" target="_blank" rel="noopener" class="btn-outline">
-        <i class="fa-brands fa-behance" aria-hidden="true"></i> Behance
-      </a>
-      <a href="https://github.com/imlucas007" target="_blank" rel="noopener" class="btn-outline">
-        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
-      </a>
-    </div>
-
-  </section>
-
-  <!-- ════════════════════════════════════
-       MARQUEE DE SERVIÇOS (texto)
-  ════════════════════════════════════ -->
-  <div class="text-marquee-wrap" aria-hidden="true">
-    <!--
-      LOOP CONTÍNUO:
-      O conteúdo é duplicado DENTRO do track.
-      A animação desloca -50%, o que nos leva
-      exatamente ao início do segundo bloco,
-      criando loop perfeito sem salto.
-    -->
-    <div class="text-marquee-track">
-      <!-- Bloco 1 -->
-      <span class="marquee-word">Web Design</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Identidade Visual</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">UI/UX Design</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Social Media</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Landing Pages</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Branding</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Front-end</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Design Gráfico</span><span class="marquee-sep">·</span>
-      <!-- Bloco 2 — cópia idêntica -->
-      <span class="marquee-word">Web Design</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Identidade Visual</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">UI/UX Design</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Social Media</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Landing Pages</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Branding</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Front-end</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Design Gráfico</span><span class="marquee-sep">·</span>
-      <!-- Bloco 3 — cópia idêntica -->
-      <span class="marquee-word">Web Design</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Identidade Visual</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">UI/UX Design</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Social Media</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Landing Pages</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Branding</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Front-end</span><span class="marquee-sep">·</span>
-      <span class="marquee-word">Design Gráfico</span><span class="marquee-sep">·</span>
-    </div>
+  <div class="formas-decorativas" aria-hidden="true">
+    <svg class="forma forma-circulo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1"/>
+    </svg>
+    <svg class="forma forma-quadrado" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="184" height="184" fill="none" stroke="currentColor" stroke-width="1"/>
+    </svg>
+    <svg class="forma forma-triangulo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="100,10 190,180 10,180" fill="none" stroke="currentColor" stroke-width="1"/>
+    </svg>
   </div>
 
-  <!-- ════════════════════════════════════
-       PROJETOS
-  ════════════════════════════════════ -->
-  <section class="section-projects" id="projetos">
+  <main class="contador-wrapper">
 
-    <div class="section-header fade-up">
-      <div>
-        <p class="section-tag">Trabalhos</p>
-        <h2 class="section-title">Projetos <em>recentes</em></h2>
+    <p class="contador-legenda">RASCUNHO.CO_</p>
+
+    <!-- Contador: os números são preenchidos pelo contador.js -->
+    <div class="contador" id="contador">
+      <div class="contador-bloco">
+        <span class="contador-numero" id="dias">00</span>
+        <span class="contador-label">dias</span>
       </div>
-      <a href="https://www.behance.net/rascunhoco#" target="_blank" rel="noopener" class="section-ext-link">
-        Ver no Behance ↗
-      </a>
-    </div>
-
-    <!-- Carrossel de imagens — loop contínuo com -50% -->
-    <div class="img-marquee-wrap">
-      <div class="img-marquee-track">
-        <!-- Bloco 1 -->
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507429/50_Cent_oh4lfj.webp"            class="project-img" alt="50 Cent" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507431/Tate_Mcrae_Blue_vm8ta9.webp"        class="project-img" alt="Tate McRae" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507432/Zara_Larsson_Midnight_Sun_rx9cqi.webp"      class="project-img" alt="Zara Larsson" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507431/Tate_Mcrae_Revolving_Door_huo3et.webp"    class="project-img" alt="Revolving Door" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Charli_XCX_Green_jiitxi.webp"        class="project-img" alt="Charli XCX" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Madison_Beer_h2j2rx.webp"      class="project-img" alt="Madison Beer" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507370/Billie_Eillish_zhujnl.webp"     class="project-img" alt="Billie Eilish" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Charli_Billie_Guess_ds2o3s.webp" class="project-img" alt="Charli & Billie" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Eminem_or4hmr.webp"            class="project-img" alt="Eminem" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Motomami_emzfwt.webp"         class="project-img" alt="Motomami+" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507431/Addison_Rae_a79xx1.webp"       class="project-img" alt="Addison Rae" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507431/Camila_Cabello_pdcg7e.webp"    class="project-img" alt="Camila Cabello" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Rihanna_o04s9q.webp"      class="project-img" alt="Rihanna" loading="lazy">
-        <!-- Bloco 2 — cópia idêntica para loop perfeito -->
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507429/50_Cent_oh4lfj.webp"            class="project-img" alt="50 Cent" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507431/Tate_Mcrae_Blue_vm8ta9.webp"        class="project-img" alt="Tate McRae" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507432/Zara_Larsson_Midnight_Sun_rx9cqi.webp"      class="project-img" alt="Zara Larsson" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507431/Tate_Mcrae_Revolving_Door_huo3et.webp"    class="project-img" alt="Revolving Door" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Charli_XCX_Green_jiitxi.webp"        class="project-img" alt="Charli XCX" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Madison_Beer_h2j2rx.webp"      class="project-img" alt="Madison Beer" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507370/Billie_Eillish_zhujnl.webp"     class="project-img" alt="Billie Eilish" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Charli_Billie_Guess_ds2o3s.webp" class="project-img" alt="Charli & Billie" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Eminem_or4hmr.webp"            class="project-img" alt="Eminem" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Motomami_emzfwt.webp"         class="project-img" alt="Motomami+" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507431/Addison_Rae_a79xx1.webp"       class="project-img" alt="Addison Rae" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507431/Camila_Cabello_pdcg7e.webp"    class="project-img" alt="Camila Cabello" loading="lazy">
-        <img src="https://res.cloudinary.com/djhwjqcb7/image/upload/v1778507430/Rihanna_o04s9q.webp"      class="project-img" alt="Rihanna" loading="lazy">
+      <span class="contador-separador" aria-hidden="true">:</span>
+      <div class="contador-bloco">
+        <span class="contador-numero" id="horas">00</span>
+        <span class="contador-label">horas</span>
+      </div>
+      <span class="contador-separador" aria-hidden="true">:</span>
+      <div class="contador-bloco">
+        <span class="contador-numero" id="minutos">00</span>
+        <span class="contador-label">min</span>
+      </div>
+      <span class="contador-separador" aria-hidden="true">:</span>
+      <div class="contador-bloco">
+        <span class="contador-numero" id="segundos">00</span>
+        <span class="contador-label">seg</span>
       </div>
     </div>
 
-    <div class="projects-btns">
-      <a href="https://www.behance.net/rascunhoco" target="_blank" rel="noopener" class="btn-filled">
-        <i class="fa-brands fa-behance" aria-hidden="true"></i> Acessar Behance
-      </a>
-      <a href="https://github.com/imlucas007" target="_blank" rel="noopener" class="btn-outline">
-        <i class="fa-brands fa-github" aria-hidden="true"></i> Acessar GitHub
-      </a>
-    </div>
-  </section>
+    <p class="contador-encerrado" id="mensagem-encerrado" hidden>É hoje! 🎉</p>
 
-  <!-- ════════════════════════════════════
-       SOBRE
-  ════════════════════════════════════ -->
-  <section class="section-sobre" id="sobre">
-    <div class="sobre-grid">
+  </main>
 
-      <div class="sobre-photo-wrap fade-up">
-        <div class="sobre-photo-inner">
-          <div class="sobre-photo-frame">
-            <img src="./images/ft_lucas.jpeg" alt="Lucas Simões">
-          </div>
-          <div class="sobre-badge">
-            <strong>4+</strong>
-            anos de experiência
-          </div>
-        </div>
-      </div>
-
-      <div class="fade-up">
-        <p class="section-tag">Sobre</p>
-        <h2 class="sobre-content-title">
-          Olá, sou<br><em>Lucas Simões</em>
-        </h2>
-        <div class="sobre-text">
-          <p>Sou um web designer e desenvolvedor front-end apaixonado por transformar ideias em experiências digitais criativas. Há 4 anos estudo e pratico programação e design, sempre buscando soluções inovadoras.</p>
-          <p>Atualmente focado em criar layouts que funcionam perfeitamente e conectam marcas ao seu público.</p>
-        </div>
-        <div class="skills">
-          <span class="skill-tag">HTML</span>
-          <span class="skill-tag">CSS</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Tailwind</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Photoshop</span>
-          <span class="skill-tag">Illustrator</span>
-          <span class="skill-tag">Adobe XD</span>
-          <span class="skill-tag">Affinity</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════
-       SERVIÇOS
-  ════════════════════════════════════ -->
-  <section class="section-servicos" id="servicos">
-    <div class="servicos-inner">
-
-      <div class="servicos-top fade-up">
-        <p class="section-tag">O que faço</p>
-        <h2 class="section-title">Serviços <em>oferecidos</em></h2>
-      </div>
-
-      <!-- Web Design -->
-      <h3 class="servicos-cat-title">Web Design</h3>
-      <div class="servicos-grid">
-        <div class="service-card fade-up">
-          <p class="service-cat">Web Design</p>
-          <h4 class="service-name">UI/UX Design Estratégico</h4>
-          <p class="service-desc">Crio interfaces intuitivas e focadas na experiência do usuário. Prototipagem navegável no Figma.</p>
-        </div>
-        <div class="service-card fade-up">
-          <p class="service-cat">Web Design</p>
-          <h4 class="service-name">Sites Responsivos</h4>
-          <p class="service-desc">Transformo o design visual em site real e funcional usando HTML, CSS e JS.</p>
-        </div>
-        <div class="service-card fade-up">
-          <p class="service-cat">Web Design</p>
-          <h4 class="service-name">Landing Pages</h4>
-          <p class="service-desc">Páginas focadas em conversão, com design limpo e objetivo para vendas ou captação de leads.</p>
-        </div>
-      </div>
-
-      <!-- Design Gráfico -->
-      <h3 class="servicos-cat-title">Design Gráfico</h3>
-      <div class="servicos-grid">
-        <div class="service-card fade-up">
-          <p class="service-cat">Design Gráfico</p>
-          <h4 class="service-name">Identidade Visual</h4>
-          <p class="service-desc">Criação de logotipos, paleta de cores e tipografia para fortalecer sua marca.</p>
-        </div>
-        <div class="service-card fade-up">
-          <p class="service-cat">Design Gráfico</p>
-          <h4 class="service-name">Social Media</h4>
-          <p class="service-desc">Artes para Instagram, LinkedIn e outras redes, focadas em engajamento.</p>
-        </div>
-        <div class="service-card fade-up">
-          <p class="service-cat">Design Gráfico</p>
-          <h4 class="service-name">Impressos</h4>
-          <p class="service-desc">Cartões de visita, flyers, banners e materiais corporativos.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════
-       CONTATO
-  ════════════════════════════════════ -->
-  <section class="section-contato" id="contato">
-    <div class="contato-inner">
-
-      <div class="fade-up">
-        <p class="section-tag">Contato</p>
-        <div class="contato-big">
-          Vamos<br>trabalhar<br><span>juntos?</span>
-        </div>
-        <p class="contato-desc">
-          Se você busca um web designer ou designer gráfico, entre em contato.
-          Vamos transformar suas ideias em realidade digital.
-        </p>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/rascunho.co_/" target="_blank" rel="noopener" class="icon-circle" title="Instagram" aria-label="Instagram">
-            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://wa.me/5511993543144" target="_blank" rel="noopener" class="icon-circle" title="WhatsApp" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-          </a>
-          <a href="www.linkedin.com/in/lcsimoes" target="_blank" rel="noopener" class="icon-circle" title="LinkedIn" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.behance.net/rascunhoco" target="_blank" rel="noopener" class="icon-circle" title="Behance" aria-label="Behance">
-            <i class="fa-brands fa-behance" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.tiktok.com/@rascunho.co" target="_blank" rel="noopener" class="icon-circle" title="TikTok" aria-label="TikTok">
-            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwQFJsqK1nis-UZ4mUIcs3TRZJJKTElh91P6m5jtrmjvNLbA/viewform" target="_blank" rel="noopener" class="icon-circle" title="Orçamento" aria-label="Orçamento">
-            <i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/imlucas007" target="_blank" rel="noopener" class="icon-circle" title="GitHub" aria-label="GitHub">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://br.pinterest.com/rascunhoco/" target="_blank" rel="noopener" class="icon-circle" title="Pinterest" aria-label="Pinterest">
-            <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="fade-up">
-        <form class="contact-form" id="contactForm">
-          <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
-
-          <div class="form-group">
-            <label class="form-label" for="nome">Nome</label>
-            <input id="nome" type="text" name="Nome" required
-                   placeholder="Digite seu nome completo" class="form-control">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="email">E-mail</label>
-            <input id="email" type="email" name="Email" required
-                   placeholder="seu.email@exemplo.com" class="form-control">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="telefone">Número</label>
-            <input id="telefone" type="tel" name="Telefone"
-                   placeholder="(XX) XXXXX-XXXX" class="form-control">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="Mensagem" class="form-control"
-                      placeholder="Me conte um pouco sobre o seu projeto..."></textarea>
-          </div>
-          <div class="form-submit-wrap">
-            <button type="submit" class="btn-submit" id="submitBtn">
-              Enviar mensagem →
-            </button>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════ -->
-  <footer>
-   <a href="#" class="nav-logo">
-        <img src="./images/logo_nav.png" alt="Rascunho.co"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
-        <!-- fallback caso a imagem não carregue -->
-        <span class="nav-logo-text" style="display:none;">rascunho<span>.co</span></span>
-      </a>
-    <p class="footer-copy">© 2026 Rascunho.co — Todos os direitos reservados.</p>
-    <nav class="footer-links" aria-label="Links do rodapé">
-      <a href="#projetos" class="footer-link">Projetos</a>
-      <a href="#sobre"    class="footer-link">Sobre</a>
-      <a href="#contato"  class="footer-link">Contato</a>
-    </nav>
-  </footer>
-
-  <!-- BACK TO TOP -->
-  <button id="backToTop" aria-label="Voltar ao topo">
-    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
-  </button>
-
-  <!-- ════════════════════════════════════
-       MODAL — STATUS DO FORMULÁRIO
-  ════════════════════════════════════ -->
-  <div class="modal-overlay" id="statusModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-box">
-      <div class="modal-icon" id="modalIcon"></div>
-      <h3 class="modal-title"   id="modalTitle"></h3>
-      <p  class="modal-message" id="modalMessage"></p>
-      <button class="modal-close-btn" id="closeModalBtn">Entendido</button>
-    </div>
-  </div>
-
-  <!-- ════════════════════════════════════
-       MODAL — IMAGEM DO PROJETO
-  ════════════════════════════════════ -->
-  <div class="modal-overlay" id="imageModal" role="dialog" aria-modal="true" aria-label="Visualizar imagem">
-    <button class="img-modal-close" id="closeImageModal" aria-label="Fechar">
-      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-    </button>
-    <div class="img-modal-inner">
-      <img id="modalImg" src="" alt="Preview do projeto">
-      <div class="img-modal-card">
-        <p>Gostou dessa arte? Você pode baixá-la aqui!</p>
-        <a id="downloadBtn" href="" download class="btn-download">
-          <i class="fa-solid fa-download" aria-hidden="true"></i> Baixar Imagem
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- JS externo -->
-  <script src="./js/script.js"></script>
+  <script src="contador.js"></script>
 </body>
 </html>
